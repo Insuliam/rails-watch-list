@@ -1,0 +1,11 @@
+<div class="container">
+  <% @lists.each do |list|%>
+    <%= link_to list_path(list) do %>
+      <div class="border p-3 my-2">
+        <%= list.name  %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<%= link_to "add list", new_list_path, class: "btn btn-primary" %>
